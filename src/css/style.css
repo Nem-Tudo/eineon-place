@@ -1,0 +1,59 @@
+@import url('https://fonts.cdnfonts.com/css/heavitas');
+
+main{
+    /* display: flex; */
+    width: 100vw;
+    height: calc(100vh - 90px);
+    /* justify-content: center; */
+    /* align-items: center; */
+    z-index: -2;
+    position: absolute;
+}
+
+.canvas{
+    transform-origin: 0px 0px;
+    transform: scale(1) translate(0px, 0px);
+    z-index: -1;
+    position: fixed;
+    margin: 100px;
+}
+
+img {
+    background: rgb(255, 255, 255);
+    position: absolute;
+    cursor: pointer;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+#select{
+    background: rgba(0, 0, 0, 0)
+}
+body{
+    overflow-x: hidden;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0, 0, 0.35, 1.38);
+    pointer-events: none;
+}
+
+
+.bottom-hidden {
+    transform: translateY(200px)
+}
+
+[disabled]{
+    cursor: not-allowed;
+    opacity: .5;
+}
+[disabled]:hover{
+    transform: unset
+}
